@@ -11,8 +11,11 @@ const LoginScreen = () => {
   const dispatch = useDispatch();
 
   const login = () => {
-    if(username.length === 0){
-      Alert.alert('username is required', '', [{text: 'OK'}]);
+    if(username.length === 0) {
+      Alert.alert('username is required', '', [{text: 'OK'}, {
+        text: 'wassup',
+        onPress: () => console.log('you pressed me')
+      }]);
       return;
     }
     if(password.length === 0){
